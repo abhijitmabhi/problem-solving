@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class NumberOfLinesToWriteString806 {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(numberOfLines(new int[]{4,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10}, "bbbcccdddaaa")));
+        System.out.println(Arrays.toString(numberOfLines(new int[]{10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10}, "abcdefghijklmnopqrstuvwxyz")));
     }
 
     // 2144
@@ -24,13 +24,7 @@ public class NumberOfLinesToWriteString806 {
 
         for (int i = 0; i < s.length(); i++) {
             int index = alphabet.get(s.charAt(i));
-            if(result[0] < 100){
-                int rr =  result[0] + widths[index];
-                if (rr > 100){
-                    line++;
-                    result[0] = widths[index];
-                    continue;
-                }
+            if((result[0] + widths[index]) <= 100){
                 result[0] += widths[index];
             }else {
                 line++;
