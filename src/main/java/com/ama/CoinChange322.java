@@ -6,39 +6,22 @@ public class CoinChange322 {
     }
 
     public static int coinChange(int[] coins, int amount) {
-//        Arrays.sort(coins);
-//        int count = 0;
-//
-//        for (int i = coins.length - 1; i >= 0; i--) {
-//            if(coins[i] <= amount){
-//                int possibility = amount / coins[i];
-//                count += possibility;
-//
-//                amount = amount - (coins[i] * possibility);
-//            }
-//        }
-//
-//        if(amount != 0)
-//            return -1;
-//
-//        return count;
         if (amount < 1) {
             return 0;
         }
 
-        int[] coinsNeeded = new int[amount + 1];
+        int[] coinNeeded = new int[amount + 1];
 
-        for (int i = 1; i <= amount; i++) {
-            coinsNeeded[i] = Integer.MAX_VALUE;
-
+        for (int i = 1; i < coinNeeded.length; i++) {
+            coinNeeded[i] = Integer.MAX_VALUE;
             for (int coin : coins) {
-                if (coin <= i && coinsNeeded[i - coin] != Integer.MAX_VALUE) {
-                    coinsNeeded[i] = Math.min(coinsNeeded[i], 1 + coinsNeeded[i - coin]);
+                if (coin <= i && coinNeeded[i - coin] != Integer.MAX_VALUE) {
+                    coinNeeded[i] = Math.min(1 + coinNeeded[i - coin], coinNeeded[i]);
                 }
             }
         }
 
-        return coinsNeeded[amount] == Integer.MAX_VALUE ? -1 : coinsNeeded[amount];
+        return coinNeeded[amount] == Integer.MAX_VALUE ? -1 : coinNeeded[amount];
     }
 
 }
