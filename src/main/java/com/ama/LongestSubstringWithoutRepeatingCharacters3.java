@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class LongestSubstringWithoutRepeatingCharacters3 {
     public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstring(""));
+        System.out.println(lengthOfLongestSubstring("abcabcbb"));
     }
 
     public static int lengthOfLongestSubstring(String s) {
@@ -14,8 +14,7 @@ public class LongestSubstringWithoutRepeatingCharacters3 {
         int maxLength = 0;
 
         while (rightPtr < s.length()) {
-            if (!myHash.contains(s.charAt(rightPtr))) {
-                myHash.add(s.charAt(rightPtr));
+            if (myHash.add(s.charAt(rightPtr))) {
                 rightPtr++;
                 maxLength = Math.max(myHash.size(), maxLength);
             } else {
