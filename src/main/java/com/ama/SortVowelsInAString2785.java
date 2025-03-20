@@ -1,6 +1,7 @@
 package com.ama;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class SortVowelsInAString2785 {
@@ -19,7 +20,7 @@ public class SortVowelsInAString2785 {
             }
         }
 
-        vowelList.sort(Character::compareTo);
+        Collections.sort(vowelList);
 
         for (int i = 0; i < s.length(); i++) {
             if (vowel.indexOf(word[i]) != -1) {
