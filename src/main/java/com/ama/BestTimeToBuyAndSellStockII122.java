@@ -17,7 +17,6 @@ public class BestTimeToBuyAndSellStockII122 {
                 buyingPrice = prices[i];
             } else {
                 maxProfitList.add((prices[i] - buyingPrice));
-                buyingPrice = prices[i];
             }
         }
 
