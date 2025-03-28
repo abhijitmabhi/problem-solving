@@ -6,16 +6,16 @@ public class MoveZeroes283 {
     }
 
     public static void moveZeroes(int[] nums) {
-        int ptrZero = 0;
+        int ptr = 0;
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 1; i < nums.length; i++) {
             if (nums[i] != 0) {
-                if (i != ptrZero) {
-                    nums[ptrZero] = nums[i];
-                    nums[i] = 0;
-                }
-                ptrZero++;
+                nums[ptr++] = nums[i];
             }
+        }
+
+        while (ptr < nums.length) {
+            nums[ptr++] = 0;
         }
     }
 }
