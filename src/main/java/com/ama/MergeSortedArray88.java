@@ -15,6 +15,17 @@ public class MergeSortedArray88 {
 
         Arrays.sort(nums1);
 
+        // bubble sort for Ascending  order
+//        for (int i = 0; i < nums1.length - 1; i++) {
+//            for (int j = 0; j < nums1.length - 1 - i; j++) {
+//                if (nums1[j] > nums1[j + 1]) {
+//                    int temp = nums1[j];
+//                    nums1[j] = nums1[j + 1];
+//                    nums1[j + 1] = temp;
+//                }
+//            }
+//        }
+
         // print
         System.out.println(Arrays.toString(nums1));
     }
