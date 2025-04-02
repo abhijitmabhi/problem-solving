@@ -2,9 +2,10 @@ package com.ama;
 
 public class SearchInsertPosition35 {
     public static void main(String[] args) {
-        System.out.println(searchInsert(new int[]{1, 3, 5, 6}, 9));
+        System.out.println(searchInsert(new int[]{1, 3, 5, 6}, 0));
     }
 
+    // Binary Search
     public static int searchInsert(int[] nums, int target) {
         int first = 0;
         int last = nums.length - 1;
@@ -22,5 +23,16 @@ public class SearchInsertPosition35 {
         }
 
         return first;
+    }
+
+    // Simple solution
+    public static int searchInsert2(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == target || nums[i] > target) {
+                return i;
+            }
+        }
+
+        return nums.length;
     }
 }
