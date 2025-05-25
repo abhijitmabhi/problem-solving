@@ -6,7 +6,7 @@ import java.util.List;
 
 public class HappyNumber202 {
     public static void main(String[] args) {
-        System.out.println(isHappyNumber(19));
+        System.out.println(isHappyNumber(2));
     }
 
     private static boolean isHappyNumber(int n) {
@@ -17,16 +17,16 @@ public class HappyNumber202 {
 
             List<Integer> nums = getNumList(n);
 
-            long sum = 0;
+            int sum = 0;
             for (int i : nums) {
-                sum += (long) i * i;
+                sum += i * i;
             }
 
             if (sum == 1) {
                 return true;
             }
 
-            n = (int) sum;
+            n = sum;
         }
 
         return false;
