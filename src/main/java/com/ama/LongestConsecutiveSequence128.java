@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class LongestConsecutiveSequence128 {
     public static void main(String[] args) {
-        System.out.println(longestConsecutive(new int[]{1,0,1,2}));
+        System.out.println(longestConsecutive(new int[]{0,3,7,2,5,8,4,6,0,1}));
     }
 
     private static int longestConsecutive(int[] nums) {
@@ -16,26 +16,21 @@ public class LongestConsecutiveSequence128 {
 
         int maxConsecutive = 0;
 
-        for (int i = 0; i < nums.length; i++) {
-            int currentNum = nums[i];
+        for (int num : hashSet) {
+            int currentNum = num;
             int currentMaxConsecutive = 1;
 
-            while (hasNextConsecutive(currentNum, hashSet)) {
-                currentMaxConsecutive++;
-                currentNum = currentNum+1;
+            if (!hashSet.contains(currentNum - 1)) {
+                while (hashSet.contains(currentNum+1)) {
+                    currentMaxConsecutive++;
+                    currentNum = currentNum + 1;
+                }
+
+                maxConsecutive = Math.max(maxConsecutive, currentMaxConsecutive);
             }
 
-            maxConsecutive = Math.max(maxConsecutive, currentMaxConsecutive);
         }
 
         return maxConsecutive;
-    }
-
-    private static boolean hasNextConsecutive(int currentNum, HashSet<Integer> hashSet) {
-        if (hashSet.contains(currentNum + 1)) {
-            return true;
-        }
-
-        return false;
     }
 }
