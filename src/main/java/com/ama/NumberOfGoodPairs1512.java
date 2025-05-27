@@ -26,4 +26,6 @@ public class NumberOfGoodPairs1512 {
     private static int countPairs(int value) {
         return  (value * (value - 1)) / 2;
     }
+
+
 }
