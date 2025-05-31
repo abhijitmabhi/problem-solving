@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class PalindromePermutation266 {
     public static void main(String[] args) {
-        System.out.println(isPalindromePermutation("aabbccdde"));
+        System.out.println(isPalindromePermutation2("aabbccddef"));
     }
 
     public static boolean isPalindromePermutation(String s) {
@@ -28,6 +28,20 @@ public class PalindromePermutation266 {
 
         return true;
 
+    }
+
+    public static boolean isPalindromePermutation2(String s) {
+        int[] char_counts = new int[128];
+
+        for (int i = 0; i < s.length(); i++) {
+            char_counts[s.charAt(i)]++;
+        }
+
+        int count = 0;
+        for (int i = 0; i < char_counts.length; i++) {
+            count += char_counts[i] % 2;
+        }
+        return count <= 1;
     }
 
 }
