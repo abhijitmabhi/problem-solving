@@ -10,7 +10,6 @@ fun reverseWords(s: String): String {
     for (i in 0 until words.size) {
         val word = words[i]
         words[i] = word.reversed()
-        println("word: $word")
     }
 
     return words.joinToString(" ")
