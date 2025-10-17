@@ -1,7 +1,7 @@
 package com.ama
 
 fun main() {
-    println(convertToTitle(701))
+    println(convertToTitle(1))
 }
 
 fun convertToTitle(columnNumber: Int): String {
