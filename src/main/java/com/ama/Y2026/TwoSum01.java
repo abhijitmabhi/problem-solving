@@ -1,15 +1,15 @@
 package com.ama.Y2026;
 
 import java.util.Arrays;
-import java.util.Hashtable;
+import java.util.HashMap;
 
 public class TwoSum01 {
     static void main() {
-        System.out.println(Arrays.toString(twoSum(new int[]{2, 7, 11, 15}, 9)));
+        System.out.println(Arrays.toString(twoSum(new int[]{2, 7, 11, 15}, 18)));
     }
 
     static int[] twoSum(int[] nums, int target) {
-        Hashtable<Integer, Integer> map = new Hashtable<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
             if (!map.containsKey(target - nums[i])) {
