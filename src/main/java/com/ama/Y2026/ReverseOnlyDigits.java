@@ -1,10 +1,8 @@
 package com.ama.Y2026;
 
-import java.util.Arrays;
-
 public class ReverseOnlyDigits {
     static void main() {
-        System.out.println(reverseDigits("Ghdg1h7d6sdh9"));
+        System.out.println(reverseDigits("123"));
     }
 
     private static String reverseDigits(String str) {
@@ -29,8 +27,6 @@ public class ReverseOnlyDigits {
                 start++;
                 end--;
             }
-
-
         }
 
         return String.valueOf(strArr);
