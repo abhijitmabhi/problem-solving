@@ -31,7 +31,12 @@ public class LetterCombinationsOfAPhoneNumber17 {
         return result;
     }
 
-    private static void backtracking(List<String> result, int index, StringBuilder current, HashMap<Integer, String> letterMappings, String digits) {
+    private static void backtracking(
+            List<String> result,
+            int index,
+            StringBuilder current,
+            HashMap<Integer, String> letterMappings,
+            String digits) {
         if (index == digits.length()) {
             result.add(current.toString());
             return;
@@ -45,5 +50,4 @@ public class LetterCombinationsOfAPhoneNumber17 {
             current.deleteCharAt(current.length() - 1);
         }
     }
-
 }

@@ -1,0 +1,61 @@
+plugins {
+    id 'java'
+    id 'com.diffplug.spotless' version '6.25.0'
+}
+
+group = 'com.ama'
+version = '1.0-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JUnit 5 (Jupiter) for modern testing
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
+
+    // AssertJ for fluent assertions
+    testImplementation 'org.assertj:assertj-core:3.27.3'
+
+    // Mockito for mocking
+    testImplementation 'org.mockito:mockito-core:5.14.2'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.14.2'
+}
+
+test {
+    useJUnitPlatform()
+
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+        showStandardStreams = false
+        showExceptions = true
+        showCauses = true
+        showStackTraces = true
+        exceptionFormat = 'full'
+    }
+}
+
+spotless {
+    java {
+        // Palantir Java Format
+        palantirJavaFormat('2.50.0')
+
+        // Remove unused imports
+        removeUnusedImports()
+
+        // Import order
+        importOrder('java', 'javax', 'org', 'com', '')
+
+        // Trim trailing whitespace
+        trimTrailingWhitespace()
+
+        // End files with newline
+        endWithNewline()
+    }
+}

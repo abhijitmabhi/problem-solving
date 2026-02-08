@@ -28,6 +28,5 @@ public class ShortestDistanceToACharacter821 {
         }
 
         return result;
-
     }
 }

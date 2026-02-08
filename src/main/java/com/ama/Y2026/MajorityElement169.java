@@ -2,7 +2,7 @@ package com.ama.Y2026;
 
 public class MajorityElement169 {
     public static void main(String[] args) {
-        System.out.println(majorityElement(new int[]{6,5,5}));
+        System.out.println(majorityElement(new int[] {6, 5, 5}));
     }
 
     public static int majorityElement(int[] nums) {

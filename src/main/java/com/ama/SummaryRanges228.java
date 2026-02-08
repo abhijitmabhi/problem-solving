@@ -5,7 +5,7 @@ import java.util.List;
 
 public class SummaryRanges228 {
     public static void main(String[] args) {
-        System.out.println(summaryRanges(new int[]{1}));
+        System.out.println(summaryRanges(new int[] {1}));
     }
 
     public static List<String> summaryRanges(int[] nums) {

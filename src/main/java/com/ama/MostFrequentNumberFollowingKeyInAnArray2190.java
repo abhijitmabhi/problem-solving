@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class MostFrequentNumberFollowingKeyInAnArray2190 {
     public static void main(String[] args) {
-        System.out.println(mostFrequent(new int[]{1, 1, 2, 1, 2}, 1));
+        System.out.println(mostFrequent(new int[] {1, 1, 2, 1, 2}, 1));
     }
 
     public static int mostFrequent(int[] nums, int key) {
@@ -18,8 +18,8 @@ public class MostFrequentNumberFollowingKeyInAnArray2190 {
                 int target = nums[i + 1];
 
                 int count = 0;
-                for (int j = i+1; j < nums.length; j++) {
-                    if (nums[j] == target && j != i+1) {
+                for (int j = i + 1; j < nums.length; j++) {
+                    if (nums[j] == target && j != i + 1) {
                         count++;
                     }
 

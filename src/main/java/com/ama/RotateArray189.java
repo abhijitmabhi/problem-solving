@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class RotateArray189 {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(rotate(new int[]{1,2,3,4,5,6,7}, 3)));
+        System.out.println(Arrays.toString(rotate(new int[] {1, 2, 3, 4, 5, 6, 7}, 3)));
     }
 
     public static int[] rotate(int[] nums, int k) {
@@ -22,7 +22,7 @@ public class RotateArray189 {
             if (i + k < nums.length) {
                 result[i + k] = nums[i];
             } else {
-                int r = (i+k) - nums.length;
+                int r = (i + k) - nums.length;
                 result[r] = nums[i];
             }
         }

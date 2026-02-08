@@ -6,14 +6,14 @@ import java.util.List;
 
 public class Three3Sum15 {
     public static void main(String[] args) {
-        System.out.println(threeSum(new int[]{-2,0,1,1,2}));
+        System.out.println(threeSum(new int[] {-2, 0, 1, 1, 2}));
     }
 
     public static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
 
-        if(Arrays.stream(nums).allMatch(x -> x == 0)){
-            result.add(List.of(0,0,0));
+        if (Arrays.stream(nums).allMatch(x -> x == 0)) {
+            result.add(List.of(0, 0, 0));
 
             return result;
         }
@@ -44,6 +44,5 @@ public class Three3Sum15 {
         }
 
         return result.stream().distinct().toList();
-
     }
 }

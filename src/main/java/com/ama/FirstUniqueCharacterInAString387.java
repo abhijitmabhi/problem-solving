@@ -17,8 +17,7 @@ public class FirstUniqueCharacterInAString387 {
 
         for (var ele : myHashMap.entrySet()) {
 
-            if (ele.getValue() == 1)
-                return s.indexOf(ele.getKey());
+            if (ele.getValue() == 1) return s.indexOf(ele.getKey());
         }
 
         return -1;

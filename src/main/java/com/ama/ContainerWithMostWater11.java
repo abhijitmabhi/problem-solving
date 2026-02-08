@@ -2,7 +2,7 @@ package com.ama;
 
 public class ContainerWithMostWater11 {
     public static void main(String[] args) {
-        System.out.println(maxArea(new int[]{1, 1}));
+        System.out.println(maxArea(new int[] {1, 1}));
     }
 
     public static int maxArea(int[] height) {

@@ -27,4 +27,3 @@ public class ValidParentheses20 {
         return myStack.empty();
     }
 }
-
