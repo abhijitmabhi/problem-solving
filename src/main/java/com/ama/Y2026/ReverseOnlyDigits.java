@@ -1,7 +1,7 @@
 package com.ama.Y2026;
 
 public class ReverseOnlyDigits {
-    static void main() {
+    public static void main(String[] args) {
         System.out.println(reverseDigits("123"));
     }
 

@@ -1,7 +1,7 @@
 package com.ama.Y2026;
 
 public class BestTimeToBuyAndSellStockII122 {
-    public static void main() {
+    public static void main(String[] args) {
         System.out.println(maxProfit(new int[] {7, 1, 5, 3, 6, 4}));
     }
 

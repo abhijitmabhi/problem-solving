@@ -3,7 +3,7 @@ package com.ama.Y2026;
 import java.util.List;
 
 public class HandsOn {
-    static void main() {
+    public static void main(String[] args) {
         var myList = List.of("Alex", "Bob", "Charlie");
 
         myList.stream().filter(s -> s.length() > 3).map(String::toUpperCase).forEach(System.out::println);
