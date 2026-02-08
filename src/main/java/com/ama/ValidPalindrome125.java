@@ -13,8 +13,7 @@ public class ValidPalindrome125 {
         int rightPtr = s.length() - 1;
 
         while (leftPtr < rightPtr) {
-            if (s.charAt(leftPtr) != s.charAt(rightPtr))
-                return false;
+            if (s.charAt(leftPtr) != s.charAt(rightPtr)) return false;
 
             leftPtr++;
             rightPtr--;

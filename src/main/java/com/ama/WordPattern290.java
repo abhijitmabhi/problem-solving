@@ -11,9 +11,7 @@ public class WordPattern290 {
     public static boolean wordPattern(String pattern, String s) {
         String[] str = s.split(" ");
 
-        if (pattern.length() != str.length)
-            return false;
-
+        if (pattern.length() != str.length) return false;
 
         HashMap<Character, String> myHash = new HashMap<>();
 
@@ -31,6 +29,5 @@ public class WordPattern290 {
         }
 
         return true;
-
     }
 }

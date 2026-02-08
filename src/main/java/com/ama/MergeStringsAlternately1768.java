@@ -9,12 +9,12 @@ public class MergeStringsAlternately1768 {
         StringBuilder myString = new StringBuilder();
         int maxLength = Math.max(word1.length(), word2.length());
 
-        for(int i=0; i < maxLength; i++){
-            if(i < word1.length()){
+        for (int i = 0; i < maxLength; i++) {
+            if (i < word1.length()) {
                 myString.append(word1.charAt(i));
             }
 
-            if(i < word2.length()){
+            if (i < word2.length()) {
                 myString.append(word2.charAt(i));
             }
         }

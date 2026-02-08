@@ -2,7 +2,7 @@ package com.ama;
 
 public class CoinChange322 {
     public static void main(String[] args) {
-        System.out.println(coinChange(new int[]{1, 2, 5}, 11));
+        System.out.println(coinChange(new int[] {1, 2, 5}, 11));
     }
 
     public static int coinChange(int[] coins, int amount) {
@@ -23,5 +23,4 @@ public class CoinChange322 {
 
         return coinNeeded[amount] == Integer.MAX_VALUE ? -1 : coinNeeded[amount];
     }
-
 }

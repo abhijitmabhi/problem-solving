@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BaseballGame682 {
     public static void main(String[] args) {
-        System.out.println(calPoints(new String[]{"5", "-2", "4", "C", "D", "9", "+", "+"}));
+        System.out.println(calPoints(new String[] {"5", "-2", "4", "C", "D", "9", "+", "+"}));
     }
 
     public static int calPoints(String[] operations) {

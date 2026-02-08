@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class ContainsDuplicateII219 {
     public static void main(String[] args) {
-        System.out.println(containsNearbyDuplicate(new int[]{1,2,3,1,2,3}, 2));
+        System.out.println(containsNearbyDuplicate(new int[] {1, 2, 3, 1, 2, 3}, 2));
     }
 
     public static boolean containsNearbyDuplicate(int[] nums, int k) {
@@ -19,7 +19,7 @@ public class ContainsDuplicateII219 {
                 if (Math.abs(oldValue - i) <= k) {
                     return true;
                 }
-                map.put(nums[i], i );
+                map.put(nums[i], i);
             }
         }
         return false;

@@ -11,8 +11,7 @@ public class PascalsTriangle118 {
     public static List<List<Integer>> generate(int numRows) {
         List<List<Integer>> result = new ArrayList<>();
 
-        if (numRows == 0)
-            return result;
+        if (numRows == 0) return result;
 
         List<Integer> row = new ArrayList<>();
         row.add(1);

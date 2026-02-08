@@ -23,15 +23,11 @@ public class ReverseVowelsOfAString345 {
                 continue;
             }
 
-            if (vowels.indexOf(word[leftPtr]) == -1)
-                leftPtr++;
+            if (vowels.indexOf(word[leftPtr]) == -1) leftPtr++;
 
-            if (vowels.indexOf(word[rightPtr]) == -1)
-                rightPtr--;
-
+            if (vowels.indexOf(word[rightPtr]) == -1) rightPtr--;
         }
 
         return new String(word);
-
     }
 }

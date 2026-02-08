@@ -7,7 +7,7 @@ import java.util.List;
 
 public class RemoveDuplicatesfromSortedArray {
     public static void main(String[] args) {
-        System.out.println(removeDuplicates(new int[]{-3,-1,0,0,0,3,3}));
+        System.out.println(removeDuplicates(new int[] {-3, -1, 0, 0, 0, 3, 3}));
     }
 
     public static int removeDuplicates(int[] nums) {
