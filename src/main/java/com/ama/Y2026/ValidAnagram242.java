@@ -1,25 +1,27 @@
 package com.ama.Y2026;
 
-import java.util.HashMap;
-
 public class ValidAnagram242 {
     public static void main(String[] args) {
         System.out.println(isAnagram("anagram", "nagaram"));
     }
 
     public static boolean isAnagram(String s, String t) {
-        HashMap<Character, Integer> hashMap = new HashMap<>();
+        if (s.length() != t.length()) {
+            return false;
+        }
+
+        int[] myArr = new int[26];
 
         for (char c : s.toCharArray()) {
-            hashMap.put(c, hashMap.getOrDefault(c, 0) + 1);
+            myArr[c - 'a']++;
         }
 
         for (char c : t.toCharArray()) {
-            hashMap.put(c, hashMap.getOrDefault(c, 0) - 1);
+            myArr[c - 'a']--;
         }
 
-        for (Character k : hashMap.keySet()) {
-            if (hashMap.get(k) != 0) {
+        for (int i : myArr) {
+            if (i != 0) {
                 return false;
             }
         }
