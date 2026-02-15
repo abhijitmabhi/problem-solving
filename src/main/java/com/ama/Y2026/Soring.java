@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Soring {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(sortByLastDigitOnly(new int[]{50, 6, 2, 80, 1})));
+        System.out.println(Arrays.toString(sortByLastDigitOnly(new int[] {50, 6, 2, 80, 1})));
 
         Car BMW = new Car("BMW", 40000);
         Car Audi = new Car("Audi", 3500);
@@ -19,7 +19,6 @@ public class Soring {
         carList.sort(Comparator.comparing(Car::getPrice).reversed());
 
         System.out.println(carList);
-
     }
 
     public static int[] reverseSort(int[] arr) {
