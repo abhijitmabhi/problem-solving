@@ -2,7 +2,7 @@ package com.ama.Y2026;
 
 public class MergeSortedArray88 {
     public static void main(String[] args) {
-        merge(new int[]{0}, 0, new int[]{1}, 1);
+        merge(new int[] {0}, 0, new int[] {1}, 1);
     }
 
     private static void merge(int[] nums1, int m, int[] nums2, int n) {

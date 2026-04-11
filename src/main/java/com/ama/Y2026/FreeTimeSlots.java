@@ -5,11 +5,9 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-record TimeSlot(LocalTime start, LocalTime end) {
-}
+record TimeSlot(LocalTime start, LocalTime end) {}
 
-record DayTimeSlot(DayOfWeek day, List<TimeSlot> timeSlots) {
-}
+record DayTimeSlot(DayOfWeek day, List<TimeSlot> timeSlots) {}
 
 public class FreeTimeSlots {
     List<DayTimeSlot> schedules = new ArrayList<>();
@@ -17,10 +15,16 @@ public class FreeTimeSlots {
     int interval = 30;
 
     public FreeTimeSlots() {
-        schedules.add(new DayTimeSlot(DayOfWeek.MONDAY, List.of(new TimeSlot(LocalTime.of(10, 0), LocalTime.of(13, 0)))));
-        schedules.add(new DayTimeSlot(DayOfWeek.TUESDAY, List.of(new TimeSlot(LocalTime.of(10, 0), LocalTime.of(12, 0)), new TimeSlot(LocalTime.of(14, 0), LocalTime.of(17, 0)))));
+        schedules.add(
+                new DayTimeSlot(DayOfWeek.MONDAY, List.of(new TimeSlot(LocalTime.of(10, 0), LocalTime.of(13, 0)))));
+        schedules.add(new DayTimeSlot(
+                DayOfWeek.TUESDAY,
+                List.of(
+                        new TimeSlot(LocalTime.of(10, 0), LocalTime.of(12, 0)),
+                        new TimeSlot(LocalTime.of(14, 0), LocalTime.of(17, 0)))));
 
-        bookings.add(new DayTimeSlot(DayOfWeek.TUESDAY, List.of(new TimeSlot(LocalTime.of(10, 0), LocalTime.of(10, 30)))));
+        bookings.add(
+                new DayTimeSlot(DayOfWeek.TUESDAY, List.of(new TimeSlot(LocalTime.of(10, 0), LocalTime.of(10, 30)))));
 
         var freeTimeSlots = calculateFreeTimeSlots(schedules, bookings, interval);
 
@@ -32,7 +36,8 @@ public class FreeTimeSlots {
         }
     }
 
-    private List<DayTimeSlot> calculateFreeTimeSlots(List<DayTimeSlot> schedules, List<DayTimeSlot> bookings, int interval) {
+    private List<DayTimeSlot> calculateFreeTimeSlots(
+            List<DayTimeSlot> schedules, List<DayTimeSlot> bookings, int interval) {
         var result = new ArrayList<DayTimeSlot>();
 
         for (var schedule : schedules) {
@@ -49,7 +54,8 @@ public class FreeTimeSlots {
         return result;
     }
 
-    private List<TimeSlot> calculateFreeSlotsForThisDay(DayOfWeek day, TimeSlot timeSlot, List<DayTimeSlot> bookings, int interval) {
+    private List<TimeSlot> calculateFreeSlotsForThisDay(
+            DayOfWeek day, TimeSlot timeSlot, List<DayTimeSlot> bookings, int interval) {
         var freeTimeSlotsOfTheDay = new ArrayList<TimeSlot>();
         var t = timeSlot.start();
 
@@ -61,7 +67,7 @@ public class FreeTimeSlots {
         while (!t.plusMinutes(interval).isAfter(timeSlot.end())) {
             var candidate = new TimeSlot(t, t.plusMinutes(interval));
 
-            if(!duplicateCandidate(day, candidate, bookingsOfTheDay)) {
+            if (!duplicateCandidate(day, candidate, bookingsOfTheDay)) {
                 freeTimeSlotsOfTheDay.add(candidate);
             }
 
