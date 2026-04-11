@@ -2,7 +2,8 @@ package com.ama;
 
 public class ShortestDistanceToTargetStringInACircularArray2515 {
     public static void main(String[] args) {
-        System.out.println(shortestDistance(new String[]{"practice", "makes", "perfect", "coding", "makes"}, "coding", 0));
+        System.out.println(
+                shortestDistance(new String[] {"practice", "makes", "perfect", "coding", "makes"}, "coding", 0));
     }
 
     public static int shortestDistance(String[] words, String target, int startIndex) {
