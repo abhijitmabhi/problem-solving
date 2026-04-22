@@ -28,8 +28,6 @@ public class SteamPractice {
         // sorting: descending
         var sortingDescending = list.stream().sorted(Comparator.reverseOrder()).toList();
 
-        System.out.println(sortingDescending);
-
         List<String> companies = Arrays.asList("google", "netflix", "nvidia", "", "amazon", "microsoft");
 
         // count string starts with 'N'
@@ -44,5 +42,17 @@ public class SteamPractice {
 
         // any num divisible by 3
         var numDivisibleBy3 = list.stream().anyMatch(x -> x % 3 == 0);
+
+        // flatMap
+        List<String> sList = List.of("Java", "Stream");
+
+        var flatMap = sList.stream().flatMap(s -> Arrays.stream(s.split(""))).toList();
+
+        // reduce
+        List<Integer> listReduce = List.of(1, 2, 4);
+
+        int result = listReduce.stream().reduce(10, Integer::sum);
+
+        System.out.println(result);
     }
 }
