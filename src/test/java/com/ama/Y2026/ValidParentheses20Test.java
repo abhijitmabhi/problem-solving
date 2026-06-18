@@ -1,9 +1,11 @@
 package com.ama.Y2026;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ValidParentheses20Test {
 
@@ -17,7 +19,7 @@ class ValidParentheses20Test {
         var result = ValidParentheses20.isValid(s);
 
         // Then
-        assertThat(result).isTrue();
+        assertTrue(result);
     }
 
     @Test
@@ -30,6 +32,6 @@ class ValidParentheses20Test {
         var result = ValidParentheses20.isValid(s);
 
         // Then
-        assertThat(result).isFalse();
+        assertFalse(result);
     }
 }
