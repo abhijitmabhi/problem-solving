@@ -1,6 +1,6 @@
 package com.ama.Y2026;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -17,7 +17,7 @@ class MajorityElement169Test {
         int result = MajorityElement169.majorityElement(nums);
 
         // Then
-        assertThat(result).isEqualTo(5);
+        assertEquals(5, result);
     }
 
     @Test
@@ -30,7 +30,7 @@ class MajorityElement169Test {
         int result = MajorityElement169.majorityElement(nums);
 
         // Then
-        assertThat(result).isEqualTo(3);
+        assertEquals(3, result);
     }
 
     @Test
@@ -43,7 +43,7 @@ class MajorityElement169Test {
         int result = MajorityElement169.majorityElement(nums);
 
         // Then
-        assertThat(result).isEqualTo(2);
+        assertEquals(2, result);
     }
 
     @Test
@@ -56,6 +56,6 @@ class MajorityElement169Test {
         int result = MajorityElement169.majorityElement(nums);
 
         // Then
-        assertThat(result).isEqualTo(1);
+        assertEquals(1, result);
     }
 }

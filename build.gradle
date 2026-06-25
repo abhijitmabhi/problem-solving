@@ -20,9 +20,6 @@ dependencies {
     // JUnit 5 (Jupiter) for modern testing
     testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
 
-    // AssertJ for fluent assertions
-    testImplementation 'org.assertj:assertj-core:3.27.3'
-
     // Mockito for mocking
     testImplementation 'org.mockito:mockito-core:5.14.2'
     testImplementation 'org.mockito:mockito-junit-jupiter:5.14.2'
