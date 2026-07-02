@@ -21,6 +21,16 @@ class TwoSumTest {
     }
 
     @Test
+    public void shouldNotReturnSameIndicesTwiceWhenTwoNumbersAddUpToTarget() {
+        int[] nums = {3,3};
+        int target = 6;
+
+        int[] result = twoSum.twoSumIndices(nums, target);
+
+        assertNotEquals(result[0], result[1]);
+    }
+
+    @Test
     public void shouldThrowIllegalArgumentExceptionWhenInputIsNullOrEmpty() {
         assertThrows(IllegalArgumentException.class, () -> twoSum.twoSumIndices(null, 0));
         assertThrows(IllegalArgumentException.class, () -> twoSum.twoSumIndices(new int[]{}, 0));
@@ -30,6 +40,8 @@ class TwoSumTest {
     public void shouldThrowIllegalStateExceptionWhenNoSolutionFound() {
         int[] nums = {2, 7, 11, 15};
         int target = 10;
+
+        assertThrows(IllegalStateException.class, () -> twoSum.twoSumIndices(nums, target));
     }
 
 }
