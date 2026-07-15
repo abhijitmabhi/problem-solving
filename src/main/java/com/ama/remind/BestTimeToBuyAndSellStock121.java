@@ -15,7 +15,7 @@ public class BestTimeToBuyAndSellStock121 {
             if (price < buyingPrice) {
                 buyingPrice = price;
             }
-                maxProfit = Math.max(maxProfit, price - buyingPrice);
+            maxProfit = Math.max(maxProfit, price - buyingPrice);
 
         }
 
