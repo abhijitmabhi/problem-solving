@@ -11,7 +11,7 @@ public class MaximumNumberOfWordsFoundInSentences2114 {
         int maxWords = 0;
 
         for (String s : sentences) {
-            maxWords = Math.max(maxWords, s.split(" ").length);
+            maxWords = Math.max(maxWords, s.split("\\s+").length);
         }
 
         return maxWords;
