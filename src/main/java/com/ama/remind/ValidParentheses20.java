@@ -2,7 +2,9 @@ package com.ama.remind;
 
 import java.util.Stack;
 
-public class ValidParentheses {
+public class ValidParentheses20 {
+    // Time Complexity: O(n)
+    // Space Complexity: 0(n)
     public static void main(String[] args) {
         System.out.println(isValid("([])"));
     }
