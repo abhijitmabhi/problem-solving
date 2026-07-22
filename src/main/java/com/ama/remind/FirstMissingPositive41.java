@@ -9,7 +9,7 @@ public class FirstMissingPositive41 {
     // Space: O(1)
     public static int findMissing(int[] nums) {
         // [1,2,3,4]
-        //  0,1,2,
+        //  0,1,2,3
 
         int n = nums.length;
         int i = 0;
