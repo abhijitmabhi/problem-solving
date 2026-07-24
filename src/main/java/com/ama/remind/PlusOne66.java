@@ -1,43 +1,32 @@
 package com.ama.remind;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class PlusOne66 {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(plusOne(new int[]{4, 3, 2, 1})));
     }
 
+    // Time: O(n)
+    // Space: O(1)
     public static int[] plusOne(int[] digits) {
-        int x = digits.length - 1;
-        int y = 0;
-        int carry = 0;
+        int carry = 1;
 
-        StringBuilder strBdr = new StringBuilder();
+        for (int i = digits.length - 1; i >= 0; i--) {
+            int sum = digits[i] + carry;
 
-        while (x >= 0 || y >= 0 || carry > 0) {
-            int x1 = x >= 0 ? digits[x] : 0;
-            int y1 = y >= 0 ? 1 : 0;
-
-            int sum = x1 + y1 + carry;
-
+            digits[i] = sum % 10;
             carry = sum / 10;
-
-            strBdr.append(sum % 10);
-
-            x--;
-            y--;
         }
 
-        List<Integer> result = new ArrayList<>();
+        if (carry > 0) {
+            int[] result = new int[digits.length + 1];
+            result[0] = carry;
+            System.arraycopy(digits, 0, result, 1, digits.length);
 
-        for (char c : strBdr.reverse().toString().toCharArray()) {
-            result.add(Character.getNumericValue(c));
+            return result;
         }
 
-        return result.stream()
-                .mapToInt(Integer::intValue)
-                .toArray();
+        return digits;
     }
 }
