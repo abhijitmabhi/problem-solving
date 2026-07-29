@@ -11,6 +11,8 @@ public class GroupAnagrams49 {
         System.out.println(groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"}));
     }
 
+    // Time: O(n * k log k)
+    // Space: O(n * k)
     public static List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
 
