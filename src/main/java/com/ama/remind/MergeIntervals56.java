@@ -25,6 +25,7 @@ public class MergeIntervals56 {
 
 
         for (int[] interval : intervals) {
+
             if (interval[0] <= newIntervals[1]) {
                 newIntervals[1] = Math.max(newIntervals[1], interval[1]);
             } else {
