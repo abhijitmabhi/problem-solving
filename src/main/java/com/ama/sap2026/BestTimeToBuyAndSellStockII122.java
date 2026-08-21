@@ -14,7 +14,6 @@ public class BestTimeToBuyAndSellStockII122 {
                 maxProfit += price - buyingPrice;
             }
             buyingPrice = price;
-
         }
 
         return maxProfit;
