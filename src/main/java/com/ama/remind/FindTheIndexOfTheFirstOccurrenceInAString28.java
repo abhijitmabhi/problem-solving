@@ -1,0 +1,13 @@
+package com.ama.remind;
+
+public class FindTheIndexOfTheFirstOccurrenceInAString28 {
+    public static void main(String[] args) {
+        System.out.println(strStr("leetcode", "leeto"));
+    }
+
+    // Time: O(n*m)
+    // Space: O(1)
+    public static int strStr(String haystack, String needle) {
+        return haystack.indexOf(needle);
+    }
+}
